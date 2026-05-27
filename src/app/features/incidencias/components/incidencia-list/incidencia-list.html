@@ -1,1 +1,57 @@
-<p>incidencia-list works!</p>
+<div class="container-fluid py-4">
+  
+  <h3 class="text-center text-white mb-4 fw-light tracking-wide">Panel de Incidencias Urbanas</h3>
+
+  <div class="card bg-secondary text-white border-0 shadow-lg style-table-card">
+    
+    <div class="card-header border-bottom border-secondary pt-4 pb-3 px-4 bg-transparent">
+      <h5 class="mb-1 fw-normal">Listado de Incidencias</h5>
+      <p class="m-0 text-white-50 small">Filtrado por Municipalidad: {{ municipioActual }}</p>
+    </div>
+
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-dark table-hover table-borderless align-middle m-0 style-custom-table">
+          <thead class="border-bottom border-secondary text-white-50">
+            <tr>
+              <th scope="col" class="px-4 py-3 fw-semibold">ID</th>
+              <th scope="col" class="py-3 fw-semibold">Descripción</th>
+              <th scope="col" class="py-3 fw-semibold text-center">Estado</th>
+              <th scope="col" class="px-4 py-3 fw-semibold text-center">Evidencia Fotográfica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of incidencias">
+              <td class="px-4 py-3">{{ item.id }}</td>
+              <td class="py-3">{{ item.descripcion }}</td>
+              
+              <td class="py-3 text-center">
+                <span class="badge rounded-pill px-3 py-2 fw-semibold style-badge"
+                      [ngClass]="item.estado === 'PENDIENTE' ? 'bg-danger text-white' : 'bg-success text-white'">
+                  {{ item.estado }}
+                </span>
+              </td>
+              
+              <td class="px-4 py-3 text-center text-white-50">
+                <button class="btn btn-sm text-white-50 border-0 hover-opacity-100" title="Ver Evidencia">
+                  <i class="bi bi-image fs-5"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card-footer border-top border-secondary bg-transparent py-3 px-4 d-flex justify-content-end text-white-50 small align-items-center">
+      <span>1 - 6 of 142 records | Página</span>
+      <div class="d-flex gap-2 ms-3">
+        <a href="javascript:void(0)" class="text-white text-decoration-none fw-bold border-bottom border-info">1</a>
+        <a href="javascript:void(0)" class="text-white-50 text-decoration-none hover-opacity-100">2</a>
+        <a href="javascript:void(0)" class="text-white-50 text-decoration-none hover-opacity-100">3</a>
+        <span class="ms-1">...</span>
+      </div>
+    </div>
+
+  </div>
+</div>

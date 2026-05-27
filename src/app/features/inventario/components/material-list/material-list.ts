@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-material-list',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './material-list.html',
-  styleUrl: './material-list.css',
+  styleUrls: ['./material-list.css']
 })
-export class MaterialList {}
+export class MaterialListComponent {
+}

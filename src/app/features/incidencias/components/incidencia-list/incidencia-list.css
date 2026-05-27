@@ -1,0 +1,41 @@
+.style-table-card {
+  background-color: #1e293b !important;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.03) !important;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.style-custom-table {
+  background-color: transparent !important;
+}
+
+.style-custom-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.style-custom-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.style-custom-table td, 
+.style-custom-table th {
+  background-color: transparent !important;
+  color: #f8fafc;
+}
+
+.style-badge {
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  width: 100px;
+}
+
+.hover-opacity-100 {
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.hover-opacity-100:hover {
+  opacity: 1 !important;
+  color: #38bdf8 !important;
+}

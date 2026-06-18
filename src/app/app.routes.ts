@@ -22,6 +22,10 @@ export const routes: Routes = [
         loadComponent: () => import('./features/inventario/components/material-list/material-list').then(m => m.MaterialListComponent)
       },
       {
+        path: 'usuarios',
+        loadComponent: () => import('./features/usuarios/components/usuario-list/usuario-list').then(m => m.UsuarioListComponent)
+      },
+      {
         path: '',
         redirectTo: 'incidencias',
         pathMatch: 'full'
